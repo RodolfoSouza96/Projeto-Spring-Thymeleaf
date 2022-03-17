@@ -1,5 +1,8 @@
 package br.com.rodolfo.projeto.controller.dto;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import br.com.rodolfo.projeto.modelo.Endereco;
 
 public class EnderecoDto {
@@ -38,6 +41,9 @@ public class EnderecoDto {
 		return estado;
 	}
 	
+	public static List<EnderecoDto> converter(List<Endereco> enderecos) {
+		return enderecos.stream().map(EnderecoDto::new).collect(Collectors.toList());
+	}	
 	
 	
 }

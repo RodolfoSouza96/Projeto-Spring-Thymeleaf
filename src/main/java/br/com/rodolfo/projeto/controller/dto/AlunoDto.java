@@ -4,13 +4,10 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import javax.validation.constraints.NotBlank;
-
 import br.com.rodolfo.projeto.modelo.Aluno;
 
 public class AlunoDto {
 
-	@NotBlank
 	private Integer id;
 	private String nome;
 	private LocalDate dataDeNascimento;

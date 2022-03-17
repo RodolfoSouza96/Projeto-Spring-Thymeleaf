@@ -11,9 +11,16 @@ public class Turma {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
-	private int capacidade;
+	private Integer capacidade;
 	
+	public Turma(){
+	}
 	
+	public Turma(String nome, Integer capacidade) {
+		this.nome = nome;
+		this.capacidade = capacidade;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -30,11 +37,11 @@ public class Turma {
 		this.nome = nome;
 	}
 	
-	public int getCapacidade() {
+	public Integer getCapacidade() {
 		return capacidade;
 	}
 	
-	public void setCapacidade(int capacidade) {
+	public void setCapacidade(Integer capacidade) {
 		this.capacidade = capacidade;
 	}
 	

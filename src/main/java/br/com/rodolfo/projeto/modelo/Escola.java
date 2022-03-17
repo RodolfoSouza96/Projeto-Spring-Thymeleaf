@@ -15,6 +15,14 @@ public class Escola {
 	@ManyToOne
 	private Endereco endereco;
 	
+	public Escola() {
+	}
+	
+	public Escola(String nome, Endereco endereco) {
+		this.nome = nome;
+		this.endereco = endereco;
+	}
+
 	public int getId() {
 		return id;
 	}
